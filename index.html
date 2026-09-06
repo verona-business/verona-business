@@ -7,7 +7,7 @@
 
     <!-- إعدادات المعاينة للواتساب (صورة الشعار والعنوان والوصف) -->
     <meta property="og:title" content="شركة فيرونا - انضمي إلينا وكوني جزءاً من النجاح المشترك">
-    <meta property="og:description" content="فرصة لا تفوت مع شركة فيرونا: راتب مجزٍ، بيئة عمل احترافية، ودورة تكوينية مجانية. انضمي لفريقنا الآن!">
+    <meta property="og:description" content="فرصة لا تفوت مع شركة فيرونا: راتب مجزي، بيئة عمل احترافية، ودورة تكوينية مجانية. انضمي لفريقنا الآن!">
     <meta property="og:image" content="https://verona-business.github.io/verona-business/logo.png">
     <meta property="og:url" content="https://verona-business.github.io/verona-business/">
     <meta property="og:type" content="website">
@@ -37,17 +37,40 @@
             padding-bottom: 50px;
         }
 
+        /* شريط التحفيز العلوي المتحرك */
+        .announcement-bar {
+            background: linear-gradient(90deg, #00b894, #00cec9);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .announcement-slider {
+            display: inline-block;
+            animation: fadeInOut 8s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
         header {
             background: linear-gradient(135deg, #4834d4, #6c5ce7);
             color: white;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
             clip-path: ellipse(150% 100% at 50% 0%);
             box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
         }
 
         .logo-container {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             background: #1a1a2e;
             padding: 15px 30px;
             border-radius: 20px;
@@ -130,6 +153,36 @@
             z-index: 10;
         }
 
+        /* عداد الإنجازات (Stats Counter) */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-bottom: 5px solid var(--accent);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #636e72;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
         .section-title {
             text-align: center;
             margin: 40px 0 15px 0;
@@ -145,7 +198,7 @@
             font-size: 1.05rem;
         }
 
-        /* تنسيق المميزات */
+        /* المميزات */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -253,36 +306,55 @@
             font-size: 0.95rem;
         }
 
-        /* آراء العضوات */
-        .testimonials-grid {
+        /* آراء العضوات بتصميم رسائل الواتساب */
+        .whatsapp-testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 50px;
         }
 
-        .testimonial-card {
-            background: white;
-            padding: 25px;
+        .wa-chat-box {
+            background: #e5ded8;
+            background-image: radial-gradient(#d4cbd0 1px, transparent 1px);
+            background-size: 15px 15px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             position: relative;
         }
 
-        .testimonial-card p {
-            color: #4b6584;
-            font-style: italic;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
+        .wa-message {
+            background: #ffffff;
+            padding: 14px 16px;
+            border-radius: 0 15px 15px 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            margin-bottom: 10px;
         }
 
-        .testimonial-author {
+        .wa-sender {
             font-weight: bold;
-            color: var(--primary);
+            color: #075e54;
             font-size: 0.9rem;
+            margin-bottom: 5px;
         }
 
-        /* الأسئلة الشائعة */
+        .wa-text {
+            color: #262626;
+            font-size: 0.95ln;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .wa-time {
+            font-size: 0.75rem;
+            color: #999;
+            text-align: left;
+            margin-top: 5px;
+        }
+
+        /* الأسئلة الشائعة مع أزرار استفسار سريعة */
         .faq-container {
             background: white;
             padding: 35px;
@@ -314,9 +386,28 @@
             color: #636e72;
             font-size: 0.95rem;
             padding-right: 25px;
+            margin-bottom: 10px;
         }
 
-        /* عداد المتواجدين الآن التفاعلي */
+        .quick-ask-btn {
+            display: inline-block;
+            background: #e8f8f5;
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 25px;
+            transition: background 0.2s;
+        }
+
+        .quick-ask-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* عداد المتواجدين الآن */
         .visitor-counter-box {
             background: white;
             padding: 20px;
@@ -338,7 +429,7 @@
             font-size: 1.3rem;
         }
 
-        /* نافذة تكبير الصورة (Lightbox Modal) */
+        /* نافذة تكبير الصورة */
         .image-modal {
             display: none;
             position: fixed;
@@ -500,6 +591,13 @@
 </head>
 <body>
 
+    <!-- شريط التحفيز العلوي المتحرك -->
+    <div class="announcement-bar">
+        <div class="announcement-slider" id="announcementText">
+            🌟 انضمي لأكثر من 500 امرأة حققن نجاحهن معنا هذا العام
+        </div>
+    </div>
+
     <header>
         <div class="logo-container">
             <img src="logo.png" alt="شعار شركة فيرونا">
@@ -513,6 +611,22 @@
 
     <div class="container">
         
+        <!-- عداد الإنجازات والنجاح (Stats Counter) -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">+500</div>
+                <div class="stat-label">عضوة نشيطة في الفريق</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">دعم وتدريب مجاني</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">خبرة مسبقة مطلوبة للبدء</div>
+            </div>
+        </div>
+
         <!-- المميزات -->
         <h2 class="section-title">لماذا تنضمين إلى فريقنا؟</h2>
         <div class="features-grid">
@@ -617,38 +731,53 @@
 
         </div>
 
-        <!-- آراء العضوات الناجحات -->
+        <!-- آراء العضوات بتصميم محادثات الواتساب الحقيقية -->
         <h2 class="section-title">ماذا تقول عضوات فريقنا؟</h2>
-        <p class="section-subtitle">قصص نجاح حقيقية من نساء بدأن معنا وحققن نتائج ممتازة:</p>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p>"انضممت إلى شركة فيرونا بدون أي خبرة مسبقة، وبفضل الدورة التكوينية ودعم المدراء، أصبحت أحقق دخلاً رائعاً وأنا في منزلي!"</p>
-                <div class="testimonial-author">- فاطمة الزهراء (الدار البيضاء)</div>
+        <p class="section-subtitle">رسائل حقيقية وموثوقة من عضوات بدأن معنا:</p>
+        
+        <div class="whatsapp-testimonials-grid">
+            <div class="wa-chat-box">
+                <div class="wa-message">
+                    <div class="wa-sender">فاطمة الزهراء (الدار البيضاء)</div>
+                    <div class="wa-text">"انضممت إلى شركة فيرونا بدون أي خبرة مسبقة، وبفضل الدورة التكوينية ودعم المدراء أصبحت أحقق دخلاً رائعاً وأنا في منزلي!"</div>
+                    <div class="wa-time">10:14 ص</div>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"المنتجات ذات جودة عالية جداً والزبونات يطلبونها باستمرار، والخصومات ساعدتني على مضاعفة أرباحي بسرعة."</p>
-                <div class="testimonial-author">- مريم (مراكش)</div>
+
+            <div class="wa-chat-box">
+                <div class="wa-message">
+                    <div class="wa-sender">مريم (مراكش)</div>
+                    <div class="wa-text">"المنتجات ذات جودة عالية جداً والزبونات يطلبونها باستمرار، والخصومات ساعدتني على مضاعفة أرباحي بسرعة."</div>
+                    <div class="wa-time">11:30 ص</div>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"أفضل خطوة اتخذتها هي الانضمام لهذا الفريق المحترف، التوجيه مستمر والعمل مريح وممتع للغاية."</p>
-                <div class="testimonial-author">- سناء (أكادير)</div>
+
+            <div class="wa-chat-box">
+                <div class="wa-message">
+                    <div class="wa-sender">سناء (أكادير)</div>
+                    <div class="wa-text">"أفضل خطوة اتخذتها هي الانضمام لهذا الفريق المحترف، التوجيه مستمر والعمل مريح وممتع للغاية."</div>
+                    <div class="wa-time">02:45 م</div>
+                </div>
             </div>
         </div>
 
-        <!-- الأسئلة الشائعة -->
+        <!-- الأسئلة الشائعة مع أزرار استفسار سريع عبر الواتساب -->
         <h2 class="section-title">أسئلة شائعة قبل الانضمام</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">❓ هل أحتاج إلى خبرة مسبقة للعمل مع شركة فيرونا؟</div>
                 <div class="faq-answer">لا، لستِ بحاجة لأي خبرة! نحن نؤمن لكِ دورة تكوينية مجانية وتدريباً خطوة بخطوة من الصفر حتى الاحتراف.</div>
+                <a href="https://api.whatsapp.com/send?phone=212767186380&text=مرحباً، لدي استفسار بخصوص الحاجة إلى خبرة مسبقة للعمل مع فيرونا" class="quick-ask-btn" target="_blank">اسألي عن هذا عبر الواتساب 💬</a>
             </div>
             <div class="faq-item">
                 <div class="faq-question">❓ هل العمل متاح حقاً من المنزل؟</div>
                 <div class="faq-answer">نعم 100%، يمكنكِ إدارة عملك ومبيعاتك مباشرة من هاتفك النقال وأنتِ في منزلك بكل راحة وفي الوقت المناسب لكِ.</div>
+                <a href="https://api.whatsapp.com/send?phone=212767186380&text=مرحباً، أود الاستفسار أكثر حول إمكانية العمل من المنزل" class="quick-ask-btn" target="_blank">اسألي عن هذا عبر الواتساب 💬</a>
             </div>
             <div class="faq-item">
                 <div class="faq-question">❓ هل هناك أي رسوم للاشتراك أو الانضمام؟</div>
                 <div class="faq-answer">الانضمام للفريق والاستفادة من التكوين المجاني هو فرصة مدعومة ومتاحة لكِ للبدء دون تعقيدات مالية.</div>
+                <a href="https://api.whatsapp.com/send?phone=212767186380&text=مرحباً، هل هناك أي رسوم للاشتراك أو الانضمام لفريق فيرونا؟" class="quick-ask-btn" target="_blank">اسألي عن هذا عبر الواتساب 💬</a>
             </div>
         </div>
 
@@ -732,22 +861,32 @@
             window.open(url, '_blank');
         }
 
+        // تبديل عبارات الشريط العلوي المتحرك تلقائياً
+        const announcements = [
+            "🌟 انضمي لأكثر من 500 امرأة حققن نجاحهن معنا هذا العام",
+            "🎁 دورة تكوينية مجانية 100% لفترة محدودة",
+            "🚀 فرصة حقيقية لزيادة دخلك من منزلك بكل راحة"
+        ];
+        let annIndex = 0;
+        setInterval(() => {
+            annIndex = (annIndex + 1) % announcements.length;
+            document.getElementById('announcementText').innerText = announcements[annIndex];
+        }, 4000);
+
         // حركة تلقائية للعداد الحي (يزيد وينقص بشكل واقعي)
         setInterval(() => {
             const countEl = document.getElementById('liveCount');
             let currentCount = parseInt(countEl.innerText);
-            // تغيير عشوائي بسيط (-1 أو +1 أو +2 أو -2)
             const change = Math.floor(Math.random() * 5) - 2; 
             currentCount += change;
             
-            // الحفاظ على الرقم ضمن نطاق واقعي (بين 18 و 38 شخصاً)
             if (currentCount < 18) currentCount = 19;
             if (currentCount > 38) currentCount = 35;
             
             countEl.innerText = currentCount;
-        }, 4000); // يتغير كل 4 ثوانٍ بشكل سلس
+        }, 4000);
 
-        // تبديل أسماء المدن في الإشعار الحي لإعطاء حيوية للصفحة
+        // تبديل أسماء المدن في الإشعار الحي
         const namesAndCities = [
             {name: "فاطمة من الدار البيضاء", time: "قبل قليل"},
             {name: "مريم من مراكش", time: "منذ دقيقتين"},
