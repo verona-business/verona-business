@@ -9,7 +9,6 @@
             --primary: #6c5ce7;
             --secondary: #a29bfe;
             --accent: #00b894;
-            --whatsapp: #25d366;
             --dark: #2d3436;
             --light: #f4f6f9;
         }
@@ -56,7 +55,6 @@
             font-size: 2.3rem;
             margin-bottom: 15px;
             font-weight: 800;
-            letter-spacing: -1px;
         }
 
         header p {
@@ -116,17 +114,11 @@
 
         .feature-card {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
             padding: 30px 20px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
             text-align: center;
-            transition: transform 0.3s ease;
             border: 1px solid rgba(255,255,255,0.8);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
         }
 
         .feature-card .icon {
@@ -141,47 +133,55 @@
             font-size: 1.3rem;
         }
 
-        /* قسم أمثلة المنتجات (كتالوج توضيحي) */
-        .showcase-grid {
+        /* تنسيق قسم صور المنتجات التوضيحية */
+        .products-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 50px;
         }
 
-        .showcase-card {
+        .product-item {
             background: white;
             border-radius: 20px;
-            padding: 25px;
+            overflow: hidden;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-right: 5px solid var(--primary);
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
 
-        .showcase-card:hover {
+        .product-item:hover {
             transform: translateY(-5px);
         }
 
-        .showcase-card h3 {
-            color: var(--primary);
-            font-size: 1.25rem;
-            margin-bottom: 10px;
+        .product-img-box {
+            width: 100%;
+            height: 220px;
+            background: #f1f2f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
-        .showcase-card p {
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* لضمان ملء الصورة للإطار بشكل جميل */
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
             color: #636e72;
             font-size: 0.95rem;
-        }
-
-        .badge-sample {
-            display: inline-block;
-            background: #ede9fe;
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 10px;
         }
 
         .form-section {
@@ -289,46 +289,70 @@
             </div>
         </div>
 
-        <!-- قسم أمثلة المنتجات (كتالوج توضيحي للعضوات) -->
-        <h2 class="section-title">أمثلة من منتجات فيرونا المتوفرة للعضوات</h2>
-        <p class="section-subtitle">هذه نماذج لأنواع المنتجات الطبية والتجميلية التي ستعملين على تسويقها والاستفادة منها:</p>
+        <!-- قسم صور المنتجات التوضيحية (الكتالوج البصري) -->
+        <h2 class="section-title">نماذج من منتجات فيرونا المتوفرة للعضوات</h2>
+        <p class="section-subtitle">شاهدوا أمثلة حية لمنتجات العناية الشخصية والتجميلية الألمانية التي نعمل عليها:</p>
         
-        <div class="showcase-grid">
+        <div class="products-gallery">
             
-            <div class="showcase-card">
-                <span class="badge-sample">العناية بالشعر</span>
-                <h3>مجموعات علاج تساقط الشعر</h3>
-                <p>منتجات طبيعية وفعالة (بالبصل والثوم، والزيوت الطبيعية) لعلاج التساقط وتقوية البصيلات.</p>
+            <div class="product-item">
+                <div class="product-img-box">
+                    <img src="product1.jpg" alt="علاج تساقط الشعر">
+                </div>
+                <div class="product-info">
+                    <h3>مجموعة علاج تساقط الشعر</h3>
+                    <p>منتجات طبيعية لتقوية البصيلات وحماية الشعر من التقصف.</p>
+                </div>
             </div>
 
-            <div class="showcase-card">
-                <span class="badge-sample">ترطيب وتغذية</span>
-                <h3>الشامبو والماسك العلاجي</h3>
-                <p>أنواع متميزة بخلاصة جوز الهند والبيوتين والأوميغا لترطيب عميق وحماية الشعر.</p>
+            <div class="product-item">
+                <div class="product-img-box">
+                    <img src="product2.jpg" alt="شامبو وماسك ترطيب">
+                </div>
+                <div class="product-info">
+                    <h3>الشامبو والماسك العلاجي</h3>
+                    <p>تركيبة مغذية بخلاصة الزيوت الطبيعية لترطيب ولمعان دائم.</p>
+                </div>
             </div>
 
-            <div class="showcase-card">
-                <span class="badge-sample">العناية بالجسم</span>
-                <h3>زيوت التخسيس وإزالة السيلوليت</h3>
-                <p>زيوت طبيعية بمستخلصات مختلفة لمساج الجسم ومساعدة فعالة في تنحيف البطن.</p>
+            <div class="product-item">
+                <div class="product-img-box">
+                    <img src="product3.jpg" alt="زيوت التخسيس والسيلوليت">
+                </div>
+                <div class="product-info">
+                    <h3>زيوت التخسيس والسيلوليت</h3>
+                    <p>مستخلصات طبيعية ممتازة للمساج والعناية بالجسم.</p>
+                </div>
             </div>
 
-            <div class="showcase-card">
-                <span class="badge-sample">العناية اليومية</span>
-                <h3>كريمات الترطيب (يدين ورجلين)</h3>
-                <p>مرطبات طبية أصلية (Green Pharmacy) للعناية بالبشرة الجافة وتشقق القدمين.</p>
+            <div class="product-item">
+                <div class="product-img-box">
+                    <img src="product4.jpg" alt="كريمات الترطيب">
+                </div>
+                <div class="product-info">
+                    <h3>كريمات الترطيب (يدين ورجلين)</h3>
+                    <p>مرطبات طبية أصلية للعناية الفائقة بالبشرة الجافة.</p>
+                </div>
             </div>
 
-            <div class="showcase-card">
-                <span class="badge-sample">صحة الفم</span>
-                <h3>معجون الأسنان الطبي العلاجي</h3>
-                <p>تركيبات احترافية للعناية بالأسنان الحساسة، حماية اللثة، والتبييض الآمن.</p>
+            <div class="product-item">
+                <div class="product-img-box">
+                    <img src="product5.jpg" alt="معجون الأسنان الطبي">
+                </div>
+                <div class="product-info">
+                    <h3>معجون الأسنان الطبي العلاجي</h3>
+                    <p>تركيبة احترافية لحماية الأسنان الحساسة واللثة.</p>
+                </div>
             </div>
 
-            <div class="showcase-card">
-                <span class="badge-sample">العناية الشخصية</span>
-                <h3>كريمات إزالة الشعر</h3>
-                <p>كريمات لطيفة وآمنة لإزالة الشعر من الجسم والوجه بدون ألم وبخلاصة الأركان والشيا.</p>
+            <div class="product-item">
+                <div class="product-img-box">
+                    <img src="product6.jpg" alt="كريم إزالة الشعر">
+                </div>
+                <div class="product-info">
+                    <h3>كريم إزالة الشعر</h3>
+                    <p>كريم آمن ولطيف بخلاصة الأركان وزبدة الشيا.</p>
+                </div>
             </div>
 
         </div>
@@ -364,13 +388,13 @@
             event.preventDefault();
             const name = document.getElementById('name').value;
             const city = document.getElementById('city').value;
-            const message = document.getElementById('message').value;
+            const message = document.get7ElementById('message').value;
 
             const phone = "212767186380"; // رقم هاتفك
 
-            const text = `مرحباً، أرغب في الانضمام إلى فريق فيرونا.%0A%0A*الاسم:* ${name}% المطلوبة:%0A*المدينة:* ${city}%0A*الرسالة:* ${message || 'لا توجد رسالة إضافية'}`;
+            const text = `مرحباً، أرغب في الانضمام إلى فريق فيرونا.%0A%0A*الاسم:* ${name}%0A*المدينة:* ${city}%0A*الرسالة:* ${message || 'لا توجد رسالة إضافية'}`;
             
-            const url = `https://api.whatsapp.com/send?phone=${phone}&text=${text}`;
+            const url = `https://api.whatsapp.c9om/send?phone=${phone}&text=${text}`;
             window.open(url, '_blank');
         }
     </script>
