@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>انضمي لفريق فيرونا - منتجات ألمانية وعمل مستقل</title>
+    <title>شركة فيرونا - انضمي إلينا وكوني جزءاً من النجاح المشترك</title>
     <style>
         :root {
             --primary: #6c5ce7;
             --secondary: #a29bfe;
             --accent: #00b894;
+            --whatsapp: #25d366;
             --dark: #2d3436;
             --light: #f4f6f9;
         }
@@ -53,8 +54,15 @@
 
         header h1 {
             font-size: 2.3rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 800;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #dfe6e9;
+            font-weight: 500;
         }
 
         header p {
@@ -105,35 +113,46 @@
             font-size: 1.05rem;
         }
 
-        .features {
+        /* تنسيق المميزات المأخوذة من الصورة */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 50px;
         }
 
-        .feature-card {
+        .feature-box {
             background: rgba(255, 255, 255, 0.95);
             padding: 30px 20px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.8);
+            border-top: 5px solid var(--primary);
+            transition: transform 0.3s ease;
         }
 
-        .feature-card .icon {
+        .feature-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .feature-box .icon {
             font-size: 2.5rem;
             margin-bottom: 15px;
             display: inline-block;
         }
 
-        .feature-card h3 {
-            margin-bottom: 12px;
+        .feature-box h3 {
+            margin-bottom: 10px;
             color: var(--primary);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
         }
 
-        /* تنسيق قسم صور المنتجات التوضيحية */
+        .feature-box p {
+            color: #636e72;
+            font-size: 0.95rem;
+        }
+
+        /* معرض صور المنتجات التوضيحية */
         .products-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -166,7 +185,7 @@
         .product-img-box img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* لضمان ملء الصورة للإطار بشكل جميل */
+            object-fit: cover;
         }
 
         .product-info {
@@ -184,6 +203,7 @@
             font-size: 0.95rem;
         }
 
+        /* استمارة التسجيل */
         .form-section {
             background: white;
             padding: 50px 40px;
@@ -243,6 +263,40 @@
             box-shadow: 0 15px 25px rgba(0, 184, 148, 0.5);
         }
 
+        /* تواصل واتساب السريع */
+        .contact-box {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .contact-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            background: white;
+            color: #128c7e;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-box a:hover {
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -263,30 +317,49 @@
         <div class="logo-container">
             <img src="logo.png" alt="شعار فيرونا">
         </div>
-        <h1>انضمي لفريق فيرونا وابدئي مشروعك المستقل! 📱✨</h1>
-        <p>نقدم لك تدريباً شاملاً ومجانياً، مع إمكانية الاستفادة من منتجات ألمانية أصلية بخصم 30% وأرباح مهمة وأنت في منزلك.</p>
+        <h1>شركة فيرونا</h1>
+        <h2>تحت إشراف مدراء المجموعة</h2>
+        <p>فرصة لا تفوت مع شركة: راتب مجزي وبيئة عمل احترافية، وكوني جزءاً من النجاح المشترك!</p>
         <a href="#register" class="btn-glow">انضمي إلينا الآن 🚀</a>
     </header>
 
     <div class="container">
-        <!-- مميزات الفريق -->
+        
+        <!-- المميزات المستوحاة من الصورة الترويجية -->
         <h2 class="section-title">لماذا تنضمين إلى فريقنا؟</h2>
-        <div class="features">
-            <div class="feature-card">
+        <div class="features-grid">
+            
+            <div class="feature-box">
+                <span class="icon">💼</span>
+                <h3>بيئة عمل احترافية</h3>
+                <p>عمل تحت إشراف مدراء المجموعة مع راتب مجزي وفرص حقيقية لتطوير دخلك.</p>
+            </div>
+
+            <div class="feature-box">
+                <span class="icon">🏷️</span>
+                <h3>خصومات حصرية وقوية</h3>
+                <p>وفّري حتى 30% على المنتجات واستفيدي من مضاعفة وزيادة المبيعات والأرباح.</p>
+            </div>
+
+            <div class="feature-box">
                 <span class="icon">🎓</span>
-                <h3>تدريب ودعم مستمر</h3>
-                <p>دورات تكوينية مجانية من الصفر لتعلم مهارات التسويق وبناء المشروع بنجاح.</p>
+                <h3>دورة تكوينية مجانية</h3>
+                <p>ابحري في رحلتك التعليمية بدون تكلفة، وابدئي مشروعك من الصفر بخطى ثابتة.</p>
             </div>
-            <div class="feature-card">
-                <span class="icon">🌿</span>
-                <h3>منتجات ألمانية عالية الجودة</h3>
-                <p>كتالوج متنوع يغطي كافة احتياجات العناية الشخصية، الشعر، والتجميل.</p>
+
+            <div class="feature-box">
+                <span class="icon">📈</span>
+                <h3>تعليم مستمر</h3>
+                <p>استثمري في نفسك، وطوري مهاراتك باستمرار بدعم وتوجيه متواصل.</p>
             </div>
-            <div class="feature-card">
-                <span class="icon">💰</span>
-                <h3>خصم 30% وأرباح</h3>
-                <p>استفيدي من تخفيضات خاصة للعضوات وتحقيق دخل مستقل بحرية تامة.</p>
-            </div>
+
+        </div>
+
+        <!-- تواصل سريع بالواتساب (رقم الهاتف المستوحى من الصورة) -->
+        <div class="contact-box">
+            <h3>انضمي إلينا الآن وكوني جزءاً من النجاح المشترك!</h3>
+            <p>تواصلي معنا مباشرة عبر الواتساب للاستفسار أو الانضمام:</p>
+            <a href="https://api.whatsapp.com/send?phone=212767186380&text=مرحباً، أرغب في الانضمام إلى شركة فيرونا والاستفسار عن التفاصيل" target="_blank">💬 +212 767-186380</a>
         </div>
 
         <!-- قسم صور المنتجات التوضيحية (الكتالوج البصري) -->
@@ -380,7 +453,7 @@
     </div>
 
     <footer>
-        <p>جميع الحقوق محفوظة © 2026 - فريق فيرونا للتجارة الإلكترونية</p>
+        <p>جميع الحقوق محفوظة © 2026 - شركة فيرونا للتجارة الإلكترونية</p>
     </footer>
 
     <script>
@@ -392,7 +465,7 @@
 
             const phone = "212767186380"; // رقم هاتفك
 
-            const text = `مرحباً، أرغب في الانضمام إلى فريق فيرونا.%0A%0A*الاسم:* ${name}%0A*المدينة:* ${city}%0A*الرسالة:* ${message || 'لا توجد رسالة إضافية'}`;
+            const text = `مرحباً، أرغب في الانضمام إلى شركة فيرونا.%0A%0A*الاسم:* ${name}%0A*المدينة:* ${city}%0A*الرسالة:* ${message || 'لا توجد رسالة إضافية'}`;
             
             const url = `https://api.whatsapp.com/send?phone=${phone}&text=${text}`;
             window.open(url, '_blank');
