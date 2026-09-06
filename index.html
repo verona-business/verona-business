@@ -85,6 +85,25 @@
             opacity: 0.95;
         }
 
+        .urgency-badge {
+            background: #ff7675;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 118, 117, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
         .btn-glow {
             display: inline-block;
             background-color: var(--accent);
@@ -232,6 +251,69 @@
         .product-info p {
             color: #636e72;
             font-size: 0.95rem;
+        }
+
+        /* آراء العضوات (Testimonials) */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .testimonial-card p {
+            color: #4b6584;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* الأسئلة الشائعة (FAQ) */
+        .faq-container {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #f1f2f6;
+            padding: 15px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: #636e72;
+            font-size: 0.95rem;
+            padding-right: 25px;
         }
 
         /* نافذة تكبير الصورة (Lightbox Modal) */
@@ -400,6 +482,7 @@
         <div class="logo-container">
             <img src="logo.png" alt="شعار فيرونا">
         </div>
+        <div class="urgency-badge">⚠️ مقاعد محدودة لدورة هذا الشهر - سارعي بالتسجيل!</div>
         <h1>شركة فيرونا</h1>
         <h2>تحت إشراف مدراء المجموعة</h2>
         <p>فرصة لا تفوت مع شركة فيرونا: راتب مجزي وبيئة عمل احترافية، وكوني جزءاً من النجاح المشترك!</p>
@@ -510,6 +593,41 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- آراء العضوات الناجحات -->
+        <h2 class="section-title">ماذا تقول عضوات فريقنا؟</h2>
+        <p class="section-subtitle">قصص نجاح حقيقية من نساء بدأن معنا وحققن أداة ممتازة:</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"انضممت إلى فيرونا بدون أي خبرة مسبقة، وبفضل الدورة التكوينية ودعم المدراء أصبحت أحقق دخلاً رائعاً وأنا في منزلي!"</p>
+                <div class="testimonial-author">- فاطمة الزهراء (الدار البيضاء)</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"المنتجات ذات جودة عالية جداً والزبائن يطلبونها باستمرار، والخصومات ساعدتني على مضاعفة أرباحي بسرعة."</p>
+                <div class="testimonial-author">- مريم (مراكش)</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"أفضل خطوة اتخذتها هي الانضمام لهذا الفريق المحترف، التوجيه مستمر والعمل مريح وممتع للغاية."</p>
+                <div class="testimonial-author">- سناء (أكادير)</div>
+            </div>
+        </div>
+
+        <!-- الأسئلة الشائعة -->
+        <h2 class="section-title">أسئلة شائعة قبل الانضمام</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">❓ هل أحتاج إلى خبرة مسبقة للعمل مع فيرونا؟</div>
+                <div class="faq-answer">لا، لستِ بحاجة لأي خبرة! نحن نؤمن لكِ دورة تكوينية مجانية وتدريباً خطوة بخطوة من الصفر حتى الاحتراف.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">❓ هل العمل متاح حقاً من المنزل؟</div>
+                <div class="faq-answer">نعم 100%، يمكنك إدارة عملك ومبيعاتك مباشرة من هاتفك النقال وأنت في منزلك بكل راحة وفي الوقت المناسب لك.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">❓ هل هناك أي رسوم للاشتراك أو الانضمام؟</div>
+                <div class="faq-answer">الانضمام للفريق والاستفادة من التكوين المجاني هو فرصة مدعومة ومتاحة لكِ للبدء دون تعقيدات مالية.</div>
+            </div>
         </div>
 
         <!-- نافذة عرض الصورة المكبرة -->
