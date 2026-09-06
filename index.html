@@ -316,6 +316,26 @@
             padding-right: 25px;
         }
 
+        /* عداد الزوار المرئي */
+        .visitor-counter-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .visitor-counter-box span {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
         /* نافذة تكبير الصورة (Lightbox Modal) */
         .image-modal {
             display: none;
@@ -628,6 +648,14 @@
                 <div class="faq-question">❓ هل هناك أي رسوم للاشتراك أو الانضمام؟</div>
                 <div class="faq-answer">الانضمام للفريق والاستفادة من التكوين المجاني هو فرصة مدعومة ومتاحة لكِ للبدء دون تعقيدات مالية.</div>
             </div>
+        </div>
+
+        <!-- عداد الزوار المرئي -->
+        <div class="visitor-counter-box">
+            <span style="font-size: 24px;">👀</span>
+            <span>عدد زوار الموقع حتى الآن:</span>
+            <!-- عداد تلقائي يعرض الرقم -->
+            <img src="https://counter9.stat.ovh/private/freecounterstat.php?c=z7689x3b8s7g5a1e2f9d8s7b6c5a4d3e" border="0" title="عدد الزوار" alt="عداد زوار" style="display:inline-block; vertical-align:middle; filter: hue-rotate(120deg);">
         </div>
 
         <!-- نافذة عرض الصورة المكبرة -->
