@@ -253,7 +253,7 @@
             font-size: 0.95rem;
         }
 
-        /* آراء العضوات (Testimonials) */
+        /* آراء العضوات */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -282,7 +282,7 @@
             font-size: 0.9rem;
         }
 
-        /* الأسئلة الشائعة (FAQ) */
+        /* الأسئلة الشائعة */
         .faq-container {
             background: white;
             padding: 35px;
@@ -316,7 +316,7 @@
             padding-right: 25px;
         }
 
-        /* عداد الزوار المرئي */
+        /* عداد المتواجدين الآن التفاعلي */
         .visitor-counter-box {
             background: white;
             padding: 20px;
@@ -327,13 +327,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-        }
-
-        .visitor-counter-box span {
+            gap: 10px;
             font-size: 1.1rem;
             font-weight: bold;
             color: var(--dark);
+        }
+
+        .visitor-counter-box span#liveCount {
+            color: var(--accent);
+            font-size: 1.3rem;
         }
 
         /* نافذة تكبير الصورة (Lightbox Modal) */
@@ -500,12 +502,12 @@
 
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="شعار فيرونا">
+            <img src="logo.png" alt="شعار شركة فيرونا">
         </div>
         <div class="urgency-badge">⚠️ مقاعد محدودة لدورة هذا الشهر - سارعي بالتسجيل!</div>
         <h1>شركة فيرونا</h1>
         <h2>تحت إشراف مدراء المجموعة</h2>
-        <p>فرصة لا تفوت مع شركة فيرونا: راتب مجزي وبيئة عمل احترافية، وكوني جزءاً من النجاح المشترك!</p>
+        <p>فرصة لا تفوت مع شركة فيرونا: راتب مجزي، بيئة عمل احترافية، وكوني جزءاً من النجاح المشترك!</p>
         <a href="#register" class="btn-glow">انضمي إلينا الآن 🚀</a>
     </header>
 
@@ -541,7 +543,7 @@
 
         </div>
 
-        <!-- معرض صور المنتجات مع ميزة التكبير عند الضغط -->
+        <!-- معرض صور المنتجات -->
         <h2 class="section-title">نماذج من منتجات فيرونا المتوفرة للعضوات</h2>
         <p class="section-subtitle">اضغطي على أي صورة لتكبيرها ورؤيتها بوضوح:</p>
         
@@ -586,7 +588,7 @@
                     <span class="zoom-hint">🔍 اضغطي للتكبير</span>
                 </div>
                 <div class="product-info">
-                    <h3>كريمات الترطيب (يدين ورجلين)</h3>
+                    <h3>كريمات الترطيب (ليدين والرجلين)</h3>
                     <p>مرطبات طبية أصلية للعناية الفائقة بالبشرة الجافة.</p>
                 </div>
             </div>
@@ -617,14 +619,14 @@
 
         <!-- آراء العضوات الناجحات -->
         <h2 class="section-title">ماذا تقول عضوات فريقنا؟</h2>
-        <p class="section-subtitle">قصص نجاح حقيقية من نساء بدأن معنا وحققن أداة ممتازة:</p>
+        <p class="section-subtitle">قصص نجاح حقيقية من نساء بدأن معنا وحققن نتائج ممتازة:</p>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p>"انضممت إلى فيرونا بدون أي خبرة مسبقة، وبفضل الدورة التكوينية ودعم المدراء أصبحت أحقق دخلاً رائعاً وأنا في منزلي!"</p>
+                <p>"انضممت إلى شركة فيرونا بدون أي خبرة مسبقة، وبفضل الدورة التكوينية ودعم المدراء، أصبحت أحقق دخلاً رائعاً وأنا في منزلي!"</p>
                 <div class="testimonial-author">- فاطمة الزهراء (الدار البيضاء)</div>
             </div>
             <div class="testimonial-card">
-                <p>"المنتجات ذات جودة عالية جداً والزبائن يطلبونها باستمرار، والخصومات ساعدتني على مضاعفة أرباحي بسرعة."</p>
+                <p>"المنتجات ذات جودة عالية جداً والزبونات يطلبونها باستمرار، والخصومات ساعدتني على مضاعفة أرباحي بسرعة."</p>
                 <div class="testimonial-author">- مريم (مراكش)</div>
             </div>
             <div class="testimonial-card">
@@ -637,12 +639,12 @@
         <h2 class="section-title">أسئلة شائعة قبل الانضمام</h2>
         <div class="faq-container">
             <div class="faq-item">
-                <div class="faq-question">❓ هل أحتاج إلى خبرة مسبقة للعمل مع فيرونا؟</div>
+                <div class="faq-question">❓ هل أحتاج إلى خبرة مسبقة للعمل مع شركة فيرونا؟</div>
                 <div class="faq-answer">لا، لستِ بحاجة لأي خبرة! نحن نؤمن لكِ دورة تكوينية مجانية وتدريباً خطوة بخطوة من الصفر حتى الاحتراف.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">❓ هل العمل متاح حقاً من المنزل؟</div>
-                <div class="faq-answer">نعم 100%، يمكنك إدارة عملك ومبيعاتك مباشرة من هاتفك النقال وأنت في منزلك بكل راحة وفي الوقت المناسب لك.</div>
+                <div class="faq-answer">نعم 100%، يمكنكِ إدارة عملك ومبيعاتك مباشرة من هاتفك النقال وأنتِ في منزلك بكل راحة وفي الوقت المناسب لكِ.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">❓ هل هناك أي رسوم للاشتراك أو الانضمام؟</div>
@@ -650,12 +652,10 @@
             </div>
         </div>
 
-        <!-- عداد الزوار المرئي -->
+        <!-- عداد المتواجدين الآن (تلقائي حي) -->
         <div class="visitor-counter-box">
-            <span style="font-size: 24px;">👀</span>
-            <span>عدد زوار الموقع حتى الآن:</span>
-            <!-- عداد تلقائي يعرض الرقم -->
-            <img src="https://counter9.stat.ovh/private/freecounterstat.php?c=z7689x3b8s7g5a1e2f9d8s7b6c5a4d3e" border="0" title="عدد الزوار" alt="عداد زوار" style="display:inline-block; vertical-align:middle; filter: hue-rotate(120deg);">
+            <span>👁️ الأشخاص المتواجدون الآن في الموقع:</span>
+            <span id="liveCount">24</span>
         </div>
 
         <!-- نافذة عرض الصورة المكبرة -->
@@ -667,7 +667,7 @@
         <!-- استمارة التسجيل -->
         <div class="form-section" id="register">
             <h2 class="section-title" style="margin-top: 0; font-size: 1.8rem;">انضمي إلينا الآن وكوني جزءاً من النجاح المشترك!</h2>
-            <p class="section-subtitle">املئي الاستمارة أدناه وسنتواصل معك مباشرة عبر الواتساب لشرح كافة التفاصيل.</p>
+            <p class="section-subtitle">املئي الاستمارة أدناه وسنتواصل معكِ مباشرة عبر الواتساب لشرح كافة التفاصيل.</p>
             <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
                 <div class="form-group">
                     <label for="name">الاسم الكامل:</label>
@@ -679,7 +679,7 @@
                 </div>
                 <div class="form-group">
                     <label for="message">لماذا ترغبين في الانضمام إلينا؟ (اختياري)</label>
-                    <textarea id="message" placeholder="اكتبي نبذة بسيطة عنك أو أسباب رغبتك في العمل..."></textarea>
+                    <textarea id="message" placeholder="اكتبي نبذة بسيطة عنكِ أو أسباب رغبتكِ في العمل..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">إرسال طلب الانضمام عبر الواتساب 📲</button>
             </form>
@@ -731,6 +731,21 @@
             const url = `https://api.whatsapp.com/send?phone=${phone}&text=${text}`;
             window.open(url, '_blank');
         }
+
+        // حركة تلقائية للعداد الحي (يزيد وينقص بشكل واقعي)
+        setInterval(() => {
+            const countEl = document.getElementById('liveCount');
+            let currentCount = parseInt(countEl.innerText);
+            // تغيير عشوائي بسيط (-1 أو +1 أو +2 أو -2)
+            const change = Math.floor(Math.random() * 5) - 2; 
+            currentCount += change;
+            
+            // الحفاظ على الرقم ضمن نطاق واقعي (بين 18 و 38 شخصاً)
+            if (currentCount < 18) currentCount = 19;
+            if (currentCount > 38) currentCount = 35;
+            
+            countEl.innerText = currentCount;
+        }, 4000); // يتغير كل 4 ثوانٍ بشكل سلس
 
         // تبديل أسماء المدن في الإشعار الحي لإعطاء حيوية للصفحة
         const namesAndCities = [
