@@ -91,31 +91,6 @@
             box-shadow: 0 12px 25px rgba(0, 184, 148, 0.6);
         }
 
-        /* شريط العد التنازلي للحماس */
-        .urgency-banner {
-            background: linear-gradient(135deg, #e17055, #d63031);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(214, 48, 49, 0.3);
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 8px;
-            font-size: 1rem;
-        }
-
-        .countdown-timer span {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 3px 10px;
-            border-radius: 5px;
-        }
-
         .container {
             max-width: 1000px;
             margin: 30px auto;
@@ -327,7 +302,6 @@
             gap: 12px;
             z-index: 999;
             border-right: 4px solid var(--accent);
-            animation: fadeInOut 5s infinite alternate;
             font-size: 0.9rem;
         }
 
@@ -342,21 +316,11 @@
         @media (max-width: 768px) {
             header h1 { font-size: 1.8rem; }
             .form-section { padding: 30px 20px; }
-            .live-notification { display: none; } /* إخفاء الإشعار في الهواتف الصغيرة جداً لعدم الازدحام */
+            .live-notification { display: none; }
         }
     </style>
 </head>
 <body>
-
-    <!-- شريط الاستعجال والعداد التنازلي -->
-    <div class="urgency-banner">
-        ⚠️ عرض الانضمام تحت إشراف المدراء والدورة المجانية ينتهي قريباً!
-        <div class="countdown-timer" id="timer">
-            <span><strong id="hours">08</strong> ساعات</span> :
-            <span><strong id="minutes">45</strong> دقيقة</span> :
-            <span><strong id="seconds">30</strong> ثانية</span>
-        </div>
-    </div>
 
     <header>
         <div class="logo-container">
@@ -523,19 +487,6 @@
             const url = `https://api.whatsapp.com/send?phone=${phone}&text=${text}`;
             window.open(url, '_blank');
         }
-
-        // عداد تنازلي وهمي متجدد للحماس
-        let hours = 8, minutes = 45, seconds = 30;
-        setInterval(() => {
-            seconds--;
-            if (seconds < 0) { seconds = 59; minutes--; }
-            if (minutes < 0) { minutes = 59; hours--; }
-            if (hours < 0) { hours = 8; }
-            
-            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-        }, 1000);
 
         // تبديل أسماء المدن في الإشعار الحي لإعطاء حيوية للصفحة
         const namesAndCities = [
