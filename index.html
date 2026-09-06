@@ -113,7 +113,7 @@
             font-size: 1.05rem;
         }
 
-        /* تنسيق المميزات المأخوذة من الصورة */
+        /* تنسيق المميزات */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -263,40 +263,6 @@
             box-shadow: 0 15px 25px rgba(0, 184, 148, 0.5);
         }
 
-        /* تواصل واتساب السريع */
-        .contact-box {
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        .contact-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .contact-box a {
-            display: inline-block;
-            background: white;
-            color: #128c7e;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .contact-box a:hover {
-            transform: scale(1.05);
-        }
-
         footer {
             text-align: center;
             padding: 30px;
@@ -325,7 +291,7 @@
 
     <div class="container">
         
-        <!-- المميزات المستوحاة من الصورة الترويجية -->
+        <!-- المميزات -->
         <h2 class="section-title">لماذا تنضمين إلى فريقنا؟</h2>
         <div class="features-grid">
             
@@ -355,14 +321,7 @@
 
         </div>
 
-        <!-- تواصل سريع بالواتساب (رقم الهاتف المستوحى من الصورة) -->
-        <div class="contact-box">
-            <h3>انضمي إلينا الآن وكوني جزءاً من النجاح المشترك!</h3>
-            <p>تواصلي معنا مباشرة عبر الواتساب للاستفسار أو الانضمام:</p>
-            <a href="https://api.whatsapp.com/send?phone=212767186380&text=مرحباً، أرغب في الانضمام إلى شركة فيرونا والاستفسار عن التفاصيل" target="_blank">💬 +212 767-186380</a>
-        </div>
-
-        <!-- قسم صور المنتجات التوضيحية (الكتالوج البصري) -->
+        <!-- معرض صور المنتجات التوضيحية -->
         <h2 class="section-title">نماذج من منتجات فيرونا المتوفرة للعضوات</h2>
         <p class="section-subtitle">شاهدوا أمثلة حية لمنتجات العناية الشخصية والتجميلية الألمانية التي نعمل عليها:</p>
         
@@ -430,10 +389,10 @@
 
         </div>
 
-        <!-- استمارة التسجيل -->
+        <!-- استمارة التسجيل الوحيدة والمنظمة -->
         <div class="form-section" id="register">
-            <h2 class="section-title" style="margin-top: 0; font-size: 1.8rem;">سجلي معلوماتك للانضمام لفريقنا فوراً</h2>
-            <p class="section-subtitle">املئي الاستمارة أدناه وسيتم التواصل معك مباشرة عبر الواتساب لشرح كافة التفاصيل.</p>
+            <h2 class="section-title" style="margin-top: 0; font-size: 1.8rem;">انضمي إلينا الآن وكوني جزءاً من النجاح المشترك!</h2>
+            <p class="section-subtitle">املئي الاستمارة أدناه وسنتواصل معك مباشرة عبر الواتساب لشرح كافة التفاصيل.</p>
             <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
                 <div class="form-group">
                     <label for="name">الاسم الكامل:</label>
